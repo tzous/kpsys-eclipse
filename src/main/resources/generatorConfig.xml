@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN" "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+<generatorConfiguration>
+	<classPathEntry location="C:\Works\lib\mysql-connector-java-5.1.35.jar" />
+	<context id="context1">
+		<jdbcConnection connectionURL="jdbc:mysql://127.0.0.1:3306/msadb?useUnicode=true&amp;characterEncoding=UTF-8" driverClass="com.mysql.jdbc.Driver" password="85124206" userId="root" />
+		<javaModelGenerator targetPackage="abc.tzous4j.kpsys.model" targetProject="kpsys" />
+		<sqlMapGenerator targetPackage="abc.tzous4j.kpsys.dao" targetProject="kpsys" />
+		<javaClientGenerator targetPackage="abc.tzous4j.kpsys.dao" targetProject="kpsys" type="XMLMAPPER" />
+		<table schema="tbuser" tableName="tbuser" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false">
+			<columnOverride column="uid" property="uid" />
+			<columnOverride column="uname" property="uname" />
+			<columnOverride column="upasswd" property="upasswd" />
+			<columnOverride column="udesc" property="udesc" />
+			<columnOverride column="ustat" property="ustat" />
+			<columnOverride column="uregister" property="uregister" />
+			<columnOverride column="uinvalid" property="uinvalid" />
+		</table>
+		<table schema="tbsys" tableName="tbsys" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false">
+			<columnOverride column="sysid" property="sysid" />
+			<columnOverride column="sysname" property="sysname" />
+			<columnOverride column="systat" property="systat" />
+		</table>
+		<table schema="tbbranch" tableName="tbbranch" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false">
+			<columnOverride column="bid" property="bid" />
+			<columnOverride column="bname" property="bname" />
+			<columnOverride column="bhid" property="bhid" />
+			<columnOverride column="bstat" property="bstat" />
+		</table>
+		<table schema="tbform" tableName="tbform" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false">
+			<columnOverride column="fid" property="fid" />
+			<columnOverride column="fname" property="fname" />
+			<columnOverride column="ftype" property="ftype" />
+			<columnOverride column="fhid" property="fhid" />
+			<columnOverride column="fstat" property="fstat" />
+		</table>
+		<table schema="tbformitem" tableName="tbformitem" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false">
+			<columnOverride column="fmid" property="fmid" />
+			<columnOverride column="fid" property="fid" />
+			<columnOverride column="fmnum" property="fmnum" />
+			<columnOverride column="fmtype" property="fmtype" />
+			<columnOverride column="fmhtype" property="fmhtype" />
+			<columnOverride column="fmcontent" property="fmcontent" />
+			<columnOverride column="fmscore" property="fmscore" />
+			<columnOverride column="fmdesc" property="fmdesc" />
+		</table>
+		<table schema="tbproj" tableName="tbproj" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false">
+			<columnOverride column="pid" property="pid" />
+			<columnOverride column="pname" property="pname" />
+			<columnOverride column="pdesc" property="pdesc" />
+			<columnOverride column="ptype" property="ptype" />
+			<columnOverride column="pscore" property="pscore" />
+			<columnOverride column="pstat" property="pstat" />
+			<columnOverride column="period" property="period" />
+		</table>
+		<table schema="tbprojrank" tableName="tbprojrank" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false">
+			<columnOverride column="rid" property="rid" />
+			<columnOverride column="pid" property="pid" />
+			<columnOverride column="rname" property="rname" />
+			<columnOverride column="rdesc" property="rdesc" />
+			<columnOverride column="rscore" property="rscore" />
+			<columnOverride column="rmode" property="rmode" />
+			<columnOverride column="rself" property="rself" />
+			<columnOverride column="fid" property="fid" />
+		</table>
+		<table schema="tbprojgrp" tableName="tbprojgrp" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false">
+			<columnOverride column="gid" property="gid" />
+			<columnOverride column="rid" property="rid" />
+			<columnOverride column="gname" property="gname" />
+			<columnOverride column="sid" property="sid" />
+			<columnOverride column="gstat" property="gstat" />
+		</table>
+		<table schema="tbprojscore" tableName="tbprojscore" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false">
+			<columnOverride column="scid" property="scid" />
+			<columnOverride column="rid" property="rid" />
+			<columnOverride column="raterid" property="raterid" />
+			<columnOverride column="targetid" property="targetid" />
+			<columnOverride column="score" property="score" />
+			<columnOverride column="scstat" property="scstat" />
+		</table>
+		<table schema="tbprojscores" tableName="tbprojscores" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false">
+			<columnOverride column="scsid" property="scsid" />
+			<columnOverride column="scid" property="scid" />
+			<columnOverride column="fmid" property="fmid" />
+			<columnOverride column="score" property="score" />
+		</table>
+		<table schema="tbstaff" tableName="tbstaff" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false">
+			<columnOverride column="sid" property="sid" />
+			<columnOverride column="sname" property="sname" />
+		</table>
+		<table schema="tbstbr" tableName="tbstbr" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false">
+			<columnOverride column="bid" property="bid" />
+			<columnOverride column="sid" property="sid" />
+		</table>
+		<table schema="tbstfm" tableName="tbstfm" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false">
+			<columnOverride column="sfid" property="sfid" />
+			<columnOverride column="sid" property="sid" />
+			<columnOverride column="pid" property="pid" />
+			<columnOverride column="fid" property="fid" />
+		</table>
+		
+	</context>
+</generatorConfiguration>
