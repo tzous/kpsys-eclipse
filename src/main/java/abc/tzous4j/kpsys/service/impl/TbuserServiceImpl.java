@@ -13,10 +13,12 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
+
 /**
  * Created by ZQ on 2016-05-20.
  */
 @Service
+
 public class TbuserServiceImpl implements ITbuserService {
     @Autowired
     private SqlSessionFactory sqlSessionFactory;
@@ -27,7 +29,8 @@ public class TbuserServiceImpl implements ITbuserService {
         SqlSession session = sqlSessionFactory.openSession();
         try {
             TbuserMapper tbuserDao = session.getMapper(TbuserMapper.class);
-            tbuserDao.insert(tbuser);
+            int ret = tbuserDao.insert(tbuser);
+            System.out.println(String.valueOf(ret));
             bret = true;
             session.commit();
         } catch (Exception e) {
